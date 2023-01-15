@@ -9,8 +9,9 @@ module.exports = {
       lastName: 'Wells',
       address: 'Viet Phu Thanh Chuong',
       gender: 1,
-      typeRole: 'ROLE',
-      keyRole: 'R1',
+      roleId: 'ROLE',
+      positionId: 'R1',
+      image: 'Bac Si Tien',
       createdAt: new Date(),
       updatedAt: new Date()
 
