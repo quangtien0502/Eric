@@ -12,15 +12,33 @@
     th,
     td {
         border: 1px solid black;
+        text-align: center;
+    }
+
+    .btn-edit {
+        background: orange;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+    }
+
+    .btn-delete {
+        background: red;
+        cursor: pointer;
+        border: none;
+
+        border-radius: 3px;
     }
 </style>
 
 <body>
-    <table style="width:100%">
+    <table class="centre" style="width:100%">
         <tr>
             <th>id</th>
             <th>first name</th>
             <th>last name</th>
+            <th>email</th>
+            <th>Actions</th>
         </tr>
         <% for(var i=0; i < data.length; i++) { %>
             <tr>
@@ -33,6 +51,17 @@
                 <td>
                     <%= data[i].lastName %>
                 </td>
+                <td>
+                    <%= data[i].email %>
+                </td>
+                <td>
+                    <%= data[i].address %>
+                </td>
+                <td>
+                    <a href="/edit-crud?id= <%=data[i].id %>" class="btn-edit" type="button">Edit</a>
+                    <button class="btn-delete" type="button">Delete</button>
+                </td>
+
             </tr>
             <% } %>
     </table>
